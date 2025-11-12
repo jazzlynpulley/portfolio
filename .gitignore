@@ -9,12 +9,17 @@ lerna-debug.log*
 
 # Dependency directories
 node_modules/
+**/node_modules/      # Ignore node_modules in subdirectories
 
 # Build artifacts
 dist/
 dist-ssr/
 build/
 out/
+**/dist/              # Ignore dist in subdirectories
+**/dist-ssr/
+**/build/
+**/out/
 
 # Local .env files
 .env
@@ -22,6 +27,8 @@ out/
 .env.development.local
 .env.test.local
 .env.production.local
+**/.env
+**/.env*.local
 
 # Editor/IDE specific files
 .vscode/
@@ -33,6 +40,7 @@ Thumbs.db
 
 # Test coverage reports
 coverage/
+**/coverage/
 
 # Misc
 *.local
