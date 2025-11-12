@@ -1,12 +1,10 @@
 version: 2.1
 
-parameters:
-  app-dir:
-    type: string
-    default: "PokemonSearch"
-
 jobs:
   build:
+    parameters:
+      app-dir:
+        type: string
     docker:
       - image: cimg/node:22.12
     working_directory: ~/project/<< parameters.app-dir >>
