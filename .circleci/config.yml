@@ -2,23 +2,19 @@ version: 2.1
 
 jobs:
   build:
-    parameters:
-      app-dir:
-        type: string
     docker:
-      - image: cimg/node:22.12
-    working_directory: ~/project/<< parameters.app-dir >>
+      - image: cimg/node:22.12 # pick your Node version
+    working_directory: ~/project # stay at repo root
     steps:
       - checkout
       - run:
           name: Install dependencies
-          command: yarn install
+          command: cd PokemonSearch && yarn install
       - run:
           name: Build project
-          command: yarn build
+          command: cd PokemonSearch && yarn build
 
 workflows:
   build_and_test:
     jobs:
-      - build:
-          app-dir: "PokemonSearch"
+      - build
