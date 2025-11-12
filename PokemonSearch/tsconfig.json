@@ -15,7 +15,12 @@
     "skipLibCheck": true,
     "allowJs": true,
     "lib": ["dom", "dom.iterable", "esnext"],
-    "types": ["react", "jest", "@testing-library/jest-dom"],
+    "types": [
+      "jest",
+      "react",
+      "@testing-library/jest-dom",
+      "@testing-library/react"
+    ],
     "baseUrl": "./"
   },
   "include": ["src"]
