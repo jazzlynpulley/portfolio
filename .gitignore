@@ -9,14 +9,14 @@ lerna-debug.log*
 
 # Dependency directories
 node_modules/
-**/node_modules/      # Ignore node_modules in subdirectories
+**/node_modules/ 
 
 # Build artifacts
 dist/
 dist-ssr/
 build/
 out/
-**/dist/              # Ignore dist in subdirectories
+**/dist/     
 **/dist-ssr/
 **/build/
 **/out/
@@ -48,3 +48,4 @@ coverage/
 .npmrc
 .yarnrc
 .pnpm-store
+**/.prettierrc

@@ -52,5 +52,5 @@ const useStyles = createUseStyles(
       },
     },
   },
-  { name: 'Home' }
+  { name: 'Home' },
 );
