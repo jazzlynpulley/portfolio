@@ -13,7 +13,7 @@ jobs:
       - run:
           name: Build project
           command: cd PokemonSearch && yarn build
-      - test:
+      - run:
           name: Run tests
           command: cd PokemonSearch && yarn test
 
