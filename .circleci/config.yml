@@ -28,7 +28,7 @@ jobs:
           command: cd Algorithms && npm install
       - run:
           name: Build project
-          command: cd Algorithms && vite
+          command: cd Algorithms && npx vite build
       - run:
           name: Run tests
           command: cd Algorithms && npm test
