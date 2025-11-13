@@ -1,10 +1,10 @@
 version: 2.1
 
 jobs:
-  build:
+  build_pokemonsearch:
     docker:
-      - image: cimg/node:22.12 # pick your Node version
-    working_directory: ~/project # stay at repo root
+      - image: cimg/node:22.12
+    working_directory: ~/project
     steps:
       - checkout
       - run:
@@ -17,7 +17,24 @@ jobs:
           name: Run tests
           command: cd PokemonSearch && yarn test
 
+  build_algorithms:
+    docker:
+      - image: cimg/node:22.12
+    working_directory: ~/project
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: cd Algorithms && npm install
+      - run:
+          name: Build project
+          command: cd Algorithms && vite
+      - run:
+          name: Run tests
+          command: cd Algorithms && npm test
+
 workflows:
   build_and_test:
     jobs:
-      - build
+      - build_pokemonsearch
+      - build_algorithms
