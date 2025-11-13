@@ -8,3 +8,7 @@ To run:
 `cd PokemonSearch`
 `yarn`
 `yarn dev`
+
+### Algorithms
+`cd Algorithms` `npm install` `npx vite`
+
