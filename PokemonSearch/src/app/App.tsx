@@ -18,9 +18,9 @@ function App() {
             <div className={classes.content}>
               <div className={classes.scrollableArea}>
                 <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/pokemon/*" element={<ListPage />} />
-                  <Route path="/pokemon/:id" element={<ListPage />} />
+                  <Route path='/' element={<Home />} />
+                  <Route path='/pokemon/*' element={<ListPage />} />
+                  <Route path='/pokemon/:id' element={<ListPage />} />
                 </Routes>
               </div>
             </div>
@@ -55,7 +55,7 @@ const useStyles = createUseStyles(
       overflow: 'auto',
     },
   },
-  { name: 'App' }
+  { name: 'App' },
 );
 
 export default App;
